@@ -1,0 +1,31 @@
+{
+  "name": "webdriverio-example",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "10.12.18",
+    "ts-node": "7.0.1",
+    "typescript": "^3.2.2",
+    "chai": "^4.2.0",
+    "@wdio/cli": "5.3.0",
+    "@wdio/local-runner": "5.3.0",
+    "@wdio/spec-reporter": "5.2.3",
+    "@wdio/mocha-framework": "5.2.8",
+    "@wdio/sync": "5.2.8",
+    "webdriverio": "5.3.0",
+    "tslint": "5.12.0",
+    "tslint-eslint-rules": "5.4.0",
+    "selenium-standalone": "^6.15.4"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "clean": "rm -rf dist",
+    "pretest": "npm run build",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "lint": "tslint 'spec/**/*.ts'",
+    "prebuild": "npm run clean",
+    "build": "npm run lint && npm run tsc"
+  }
+}
